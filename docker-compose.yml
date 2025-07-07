@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: serenatto
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: senha123
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./dados-mysql:/var/lib/mysql
+
+# COMANDOS ÚTEIS
+
+# Subir os containers:
+#   docker-compose up -d
+
+# Derrubar os containers:
+#   docker-compose down
+
+# Ver logs:
+#   docker-compose logs -f
+
+# Ver containers rodando:
+#   docker ps
+
+# Conectar ao container MySQL:
+#   docker exec -it mysql_container bash
+
+# Parar sem remover volumes:
+#   docker-compose stop
+#
+# Derrubar e remover volumes:
+#   docker-compose down -v

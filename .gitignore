@@ -42,3 +42,9 @@ phpcs.xml.dist
 
 # Outras ferramentas comuns
 node_modules/
+
+
+dados-mysql/
+
+.buildpath
+.project
