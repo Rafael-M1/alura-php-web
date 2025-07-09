@@ -4,5 +4,6 @@
     require "src/Repositorio/ProdutoRepositorio.php";
 
     $produtoRepository = new ProdutoRepositorio($pdo);
-    $id = $_GET["id"];
+    $id = $_POST["id"];
     $produtoRepository->excluir($id);
+    header("Location: admin.php");
